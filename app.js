@@ -32,9 +32,9 @@ const updateDetails = (data) => {
 
         const dayNight=undefined;
         if(weather.IsDayTime){
-            time.setAttribute('src','./icons/night.png');
+            time.setAttribute('src','./icons/d.png');
         }else{
-            time.setAttribute('src','./icons/day.png');
+            time.setAttribute('src','./icons/m.png');
         }
 }
 
@@ -59,7 +59,5 @@ cityForm.addEventListener('submit', e => {
         .then(data => {
             updateDetails(data);
             console.log(data)
-        }).catch(err => {
-            console.log(err)
         })
 });
